@@ -23,7 +23,7 @@ public class MovieAppTest_1_2_3 {
      List can be sorted by Title, Release Date and Popularity Score.
      */
     @Test
-    public void viewPopularMoviesTest() throws MalformedURLException, InterruptedException {
+    public void viewPopularMoviesTest()  {
 
 
         String headerText = movieAppPage.header.getText();
@@ -49,7 +49,6 @@ public class MovieAppTest_1_2_3 {
 
         //With the sort box still open, we will now click on both Title and Release Date
         movieAppPage.titleSort.click();
-        Thread.sleep(2000);
         String movieFirstAlphabet = movieAppPage.getTitleOfMovieNumber_(1);
 
         //Asserts Doctor Strange is at the top of the Title Alphabet list
@@ -57,7 +56,6 @@ public class MovieAppTest_1_2_3 {
 
         movieAppPage.sortBtn.click();
         movieAppPage.releaseDateSort.click();
-        Thread.sleep(2000);
         String movieReleaseDate = movieAppPage.getTitleOfMovieNumber_(1);
 
         //Asserts Thor is the newest released movie
@@ -73,7 +71,7 @@ public class MovieAppTest_1_2_3 {
         User can remove a movie from favorites from this list.
      */
     @Test
-    public void viewAndRemoveAFavoriteMovieTest() throws MalformedURLException, InterruptedException {
+    public void viewAndRemoveAFavoriteMovieTest() {
 
         movieAppPage.clickMovieNumber_(1);
         movieAppPage.favoriteBtn.click();
@@ -126,7 +124,7 @@ public class MovieAppTest_1_2_3 {
      */
 
     @Test
-    public void viewMovieDetailsTest() throws MalformedURLException, InterruptedException {
+    public void viewMovieDetailsTest()  {
 
         movieAppPage.clickMovieNumber_(1);
         String movieDetails = movieAppPage.header.getText();
