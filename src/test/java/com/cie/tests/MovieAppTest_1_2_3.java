@@ -3,14 +3,13 @@ package com.cie.tests;
 import com.cie.pages.MovieAppPage;
 import com.cie.utils.Driver;
 import io.appium.java_client.MobileElement;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 
 import java.net.MalformedURLException;
 import java.util.List;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class MovieAppTest_1_2_3 {
 
 
@@ -22,7 +21,9 @@ public class MovieAppTest_1_2_3 {
      Movie list should be the primary screen when app is launched.
      List can be sorted by Title, Release Date and Popularity Score.
      */
+
     @Test
+    @Order(1)
     public void viewPopularMoviesTest()  {
 
 
@@ -71,6 +72,7 @@ public class MovieAppTest_1_2_3 {
         User can remove a movie from favorites from this list.
      */
     @Test
+    @Order(2)
     public void viewAndRemoveAFavoriteMovieTest() {
 
         movieAppPage.clickMovieNumber_(1);
@@ -124,6 +126,7 @@ public class MovieAppTest_1_2_3 {
      */
 
     @Test
+    @Order(3)
     public void viewMovieDetailsTest()  {
 
         movieAppPage.clickMovieNumber_(1);

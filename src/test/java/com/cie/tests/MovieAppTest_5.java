@@ -6,6 +6,7 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
 public class MovieAppTest_5 {
@@ -16,6 +17,7 @@ public class MovieAppTest_5 {
      *  App will have tab-based navigation including Popular, New, and Favorites tabs.
      */
 
+    @Test
     public void navigationTabTest(){
 
         Assertions.assertTrue(movieAppPage.favoritesTab.isDisplayed());
